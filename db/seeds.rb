@@ -22,26 +22,33 @@ Search.create(url: "https://www.wanderu.com/en-us/bus/us-ny/new-york/us-dc/washi
 
 Search.create(url: "https://locations.greyhound.com/bus-routes/destination/new-york-ny/washington-dc#fare-search", company: "greyhound" ,target_date: "8/08", user_id: 2)
 
+
 #pick-up location
-Item.create(search_id: 1, price: 18, time: "18:00", location: "34th Street, 12th Avenue")
-Item.create(search_id: 1, price: 28, time: "15:00", location: "28th Street, 12th Avenue")
-Item.create(search_id: 1, price: 12, time: "14:00", location: "34th Street, 12th Avenue")
-Item.create(search_id: 1, price: 18, time: "19:00", location: "16th Street, 12th Avenue")
+Item.create(search_id: 1, user_id: 1, price: "18", bus_time: "18:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 1, user_id: 1, price: "28", bus_time: "15:00", location: "28th Street, 12th Avenue")
+Item.create(search_id: 1, user_id: 1, price: "12", bus_time: "14:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 1, user_id: 1, price: "18", bus_time: "19:00", location: "16th Street, 12th Avenue")
 
 
-Item.create(search_id: 2, price: 18, time: "06:00", location: "11th Street, 12th Avenue")
-Item.create(search_id: 2, price: 28, time: "09:00", location: "25th Street, 12th Avenue")
-Item.create(search_id: 2, price: 12, time: "11:00", location: "34th Street, 12th Avenue")
-Item.create(search_id: 2, price: 18, time: "14:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 2, user_id: 1, price: "18", bus_time: "06:00", location: "11th Street, 12th Avenue")
+Item.create(search_id: 2, user_id: 1, price: "28", bus_time: "09:00", location: "25th Street, 12th Avenue")
+Item.create(search_id: 2, user_id: 1, price: "12", bus_time: "11:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 2, user_id: 1, price: "18", bus_time: "14:00", location: "34th Street, 12th Avenue")
 
 
-Item.create(search_id: 3, price: 11, time: "06:00", location: "11th Street, 12th Avenue")
-Item.create(search_id: 3, price: 15, time: "12:00", location: "34th Street, 12th Avenue")
-Item.create(search_id: 3, price: 45, time: "18:00", location: "34th Street, 12th Avenue")
-Item.create(search_id: 3, price: 12, time: "21:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 3, user_id: 2, price: "11", bus_time: "06:00", location: "11th Street, 12th Avenue")
+Item.create(search_id: 3, user_id: 2, price: "15", bus_time: "12:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 3, user_id: 2, price: "45", bus_time: "18:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 3, user_id: 2, price: "12", bus_time: "21:00", location: "34th Street, 12th Avenue")
 
 
-Item.create(search_id: 4, price: 48, time: "06:00", location: "8th Street, 12th Avenue")
-Item.create(search_id: 4, price: 28, time: "09:00", location: "25th Street, 12th Avenue")
-Item.create(search_id: 4, price: 12, time: "11:00", location: "34th Street, 12th Avenue")
-Item.create(search_id: 4, price: 18, time: "14:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 4, user_id: 2, price: "48", bus_time: "06:00", location: "8th Street, 12th Avenue")
+Item.create(search_id: 4, user_id: 2, price: "28", bus_time: "09:00", location: "25th Street, 12th Avenue")
+Item.create(search_id: 4, user_id: 2, price: "12", bus_time: "11:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 4, user_id: 2, price: "18", bus_time: "14:00", location: "34th Street, 12th Avenue")
+
+
+UserSearch.create(user_id: 1, search_id: 1)
+UserSearch.create(user_id: 1, search_id: 2)
+UserSearch.create(user_id: 2, search_id: 3)
+UserSearch.create(user_id: 2, search_id: 4)

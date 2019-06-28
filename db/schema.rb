@@ -17,8 +17,9 @@ ActiveRecord::Schema.define(version: 2019_06_28_145736) do
 
   create_table "items", force: :cascade do |t|
     t.integer "search_id"
-    t.integer "price"
-    t.string "time"
+    t.integer "user_id"
+    t.string "price"
+    t.string "bus_time"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

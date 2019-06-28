@@ -17,17 +17,18 @@ ActiveRecord::Schema.define(version: 2019_06_28_145736) do
 
   create_table "items", force: :cascade do |t|
     t.integer "search_id"
-    t.string "name"
-    t.string "description"
-    t.string "image"
+    t.integer "price"
+    t.string "time"
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "searches", force: :cascade do |t|
+    t.integer "user_id"
     t.string "url"
-    t.string "target_name"
+    t.string "target_date"
+    t.string "company"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

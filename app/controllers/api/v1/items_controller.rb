@@ -14,7 +14,7 @@ class Api::V1::ItemsController < ApplicationController
   end
 
     private
-    def note_params
-      params.permit(:search_id, :name, :description, :image, :location)
+    def item_params
+      params.permit(:search_id, :price, :time, :location)
     end
 end

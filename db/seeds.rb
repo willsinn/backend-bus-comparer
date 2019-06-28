@@ -13,4 +13,35 @@ User.create(username:"camille", password:"camille", bio:"Lorem Ipsum is simply d
 
 
 
-Search.create()
+Search.create(url: "https://www.wanderu.com/en-us/bus/us-ny/new-york/us-dc/washington/", company: "wanderu" ,target_date: "7/07", user_id: 1)
+
+Search.create(url: "https://locations.greyhound.com/bus-routes/destination/new-york-ny/washington-dc#fare-search", company: "greyhound" ,target_date: "7/07", user_id: 1)
+
+
+Search.create(url: "https://www.wanderu.com/en-us/bus/us-ny/new-york/us-dc/washington/", company: "wanderu" ,target_date: "8/08", user_id: 2)
+
+Search.create(url: "https://locations.greyhound.com/bus-routes/destination/new-york-ny/washington-dc#fare-search", company: "greyhound" ,target_date: "8/08", user_id: 2)
+
+#pick-up location
+Item.create(search_id: 1, price: 18, time: "18:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 1, price: 28, time: "15:00", location: "28th Street, 12th Avenue")
+Item.create(search_id: 1, price: 12, time: "14:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 1, price: 18, time: "19:00", location: "16th Street, 12th Avenue")
+
+
+Item.create(search_id: 2, price: 18, time: "06:00", location: "11th Street, 12th Avenue")
+Item.create(search_id: 2, price: 28, time: "09:00", location: "25th Street, 12th Avenue")
+Item.create(search_id: 2, price: 12, time: "11:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 2, price: 18, time: "14:00", location: "34th Street, 12th Avenue")
+
+
+Item.create(search_id: 3, price: 11, time: "06:00", location: "11th Street, 12th Avenue")
+Item.create(search_id: 3, price: 15, time: "12:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 3, price: 45, time: "18:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 3, price: 12, time: "21:00", location: "34th Street, 12th Avenue")
+
+
+Item.create(search_id: 4, price: 48, time: "06:00", location: "8th Street, 12th Avenue")
+Item.create(search_id: 4, price: 28, time: "09:00", location: "25th Street, 12th Avenue")
+Item.create(search_id: 4, price: 12, time: "11:00", location: "34th Street, 12th Avenue")
+Item.create(search_id: 4, price: 18, time: "14:00", location: "34th Street, 12th Avenue")

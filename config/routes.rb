@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/searches/:id/items', to: 'searches#items'
   namespace :api do
     namespace :v1 do
       get 'searches/index'

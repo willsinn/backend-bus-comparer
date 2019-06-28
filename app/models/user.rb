@@ -5,6 +5,6 @@ class User < ApplicationRecord
   has_many :searches
 
   has_many :user_searches
-  has_many :folders, through: :user_folders
+  has_many :searches, through: :user_searches
 
 end

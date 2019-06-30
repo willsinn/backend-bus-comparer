@@ -2,7 +2,7 @@ class Api::V1::SearchesController < ApplicationController
 
   def index
     searches = Search.all
-    render json: searches
+    render json: current_user.searches
   end
 
   def show

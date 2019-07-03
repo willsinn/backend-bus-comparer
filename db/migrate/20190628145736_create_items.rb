@@ -4,8 +4,9 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.integer :search_id
       t.integer :user_id
       t.string :price
-      t.string :bus_time
-      t.string :location
+      t.time :time
+      t.string :pickup_from
+      t.string :purchase_url
 
       t.timestamps
     end

@@ -7,6 +7,7 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:id])
     render json: user
   end
+
   def profile
     render json: { user: UserSerializer.new(current_user()) }, status: :accepted
   end
@@ -28,7 +29,7 @@ class Api::V1::UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-      render json: @user 
+      render json: @user
     else
       render json: { error: 'failed to update user' }
     end

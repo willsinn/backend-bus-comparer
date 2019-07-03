@@ -1,5 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :authorized, only: [:create]
+  before_action :current_user, only: [:show, :edit, :update]
+
 
   def show
     user = User.find(params[:id])
@@ -16,6 +18,19 @@ class Api::V1::UsersController < ApplicationController
       render json: { user: UserSerializer.new(@user), jwt: @token }, status: :created
     else
       render json: { error: 'failed to create user' }, status: :not_acceptable
+    end
+  end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(user_params)
+      render json: @user 
+    else
+      render json: { error: 'failed to update user' }
     end
   end
 

@@ -19,17 +19,19 @@ ActiveRecord::Schema.define(version: 2019_06_28_145736) do
     t.integer "search_id"
     t.integer "user_id"
     t.string "price"
-    t.string "bus_time"
-    t.string "location"
+    t.time "time"
+    t.string "pickup_from"
+    t.string "purchase_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "searches", force: :cascade do |t|
     t.integer "user_id"
-    t.string "url"
-    t.string "target_date"
     t.string "company"
+    t.string "start_from"
+    t.string "to_destination"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

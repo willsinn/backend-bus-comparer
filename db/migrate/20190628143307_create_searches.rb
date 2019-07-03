@@ -5,7 +5,7 @@ class CreateSearches < ActiveRecord::Migration[5.2]
       t.string :company
       t.string :start_from
       t.string :to_destination
-      t.string :date
+      t.date :date
 
       t.timestamps
     end

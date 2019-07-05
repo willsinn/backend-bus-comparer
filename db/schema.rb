@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2019_06_28_145736) do
     t.integer "search_id"
     t.integer "user_id"
     t.string "price"
-    t.time "time"
+    t.string "time"
     t.string "pickup_from"
     t.string "purchase_url"
     t.datetime "created_at", null: false

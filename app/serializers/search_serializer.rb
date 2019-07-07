@@ -1,4 +1,4 @@
 class SearchSerializer < ActiveModel::Serializer
-  attributes :id, :date, :to_destination, :start_from, :company
+  attributes :user_id, :date, :to_destination, :start_from, :company
   has_many :items
 end

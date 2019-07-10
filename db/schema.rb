@@ -10,14 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_28_145736) do
+ActiveRecord::Schema.define(version: 2019_07_10_020500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "price"
+    t.string "time"
+    t.string "pickup_from"
+    t.string "purchase_url"
+    t.string "company"
+    t.string "start_from"
+    t.string "to_destination"
+    t.string "date"
+    t.boolean "purchased"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.integer "search_id"
-    t.integer "user_id"
     t.string "price"
     t.string "time"
     t.string "pickup_from"
@@ -27,11 +41,10 @@ ActiveRecord::Schema.define(version: 2019_06_28_145736) do
   end
 
   create_table "searches", force: :cascade do |t|
-    t.integer "user_id"
     t.string "company"
     t.string "start_from"
     t.string "to_destination"
-    t.date "date"
+    t.string "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

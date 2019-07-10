@@ -22,6 +22,6 @@ class Api::V1::SearchesController < ApplicationController
     private
 
     def search_params
-      params.permit(:user_id, :company, :start_from, :to_destination, :date)
+      params.permit(:company, :start_from, :to_destination, :date)
     end
 end

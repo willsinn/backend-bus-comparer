@@ -15,6 +15,6 @@ class Api::V1::ItemsController < ApplicationController
 
     private
     def item_params
-      params.require(:item).permit(:search_id, :user_id, :price, :time, :pickup_from, :purchase_url)
+      params.require(:item).permit(:search_id, :price, :time, :pickup_from, :purchase_url)
     end
 end

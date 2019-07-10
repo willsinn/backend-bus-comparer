@@ -34,7 +34,7 @@ class Api::V1::UsersController < ApplicationController
       render json: { error: 'failed to update user' }
     end
   end
-
+  
   private
 
   def user_params

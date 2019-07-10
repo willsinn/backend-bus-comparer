@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :user_searches
   has_many :searches, through: :user_searches
 
+  has_many :favorites
+
 end

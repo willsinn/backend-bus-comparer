@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
       get '/searches', to: 'searches#index'
       get '/items', to: 'items#index'
+
+
+
+      post '/user/:id/search/:id/item/:id', to: 'items#create'
     end
   end
 end

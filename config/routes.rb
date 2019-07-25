@@ -8,6 +8,11 @@ Rails.application.routes.draw do
       get '/profile', to: 'users#profile'
       get '/searches', to: 'searches#index'
       get '/items', to: 'items#index'
+      resources :favorites, only: [:create, :edit, :index, :destroy]
+      patch 'users/favorites/:id', to: 'favorites#update'
+      post '/favorites', to: 'favorites#create'
+      post '/favorites/delete/:id', to: 'favorites#destroy'
+      get 'users/favorites', to: 'favorites#index'
     end
   end
 end

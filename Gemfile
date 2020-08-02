@@ -3,9 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 gem 'rails', '~> 5.2.3'
-group :development, :test do
-  gem 'sqlite3'
-end
+gem "passenger"
+gem "sqlite3"
+# group :development, :test do
+#   gem 'sqlite3'
+# end
 gem 'pg', group: :production
 # Use postgresql as the database for Active Record
 # gem 'pg', '>= 0.18', '< 2.0'

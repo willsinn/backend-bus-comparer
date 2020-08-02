@@ -73,7 +73,11 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: backend-bus-comparer_production
+#   username: deploy
+
 production:
-  <<: *default
-  database: backend-bus-comparer_production
-  username: deploy
+  adapter: sqlite3
+  database: db/production.sqlite3
